@@ -1,22 +1,21 @@
 #include "main.h"
 
 /**
- * rev_string - reverse a string
- * @s: string to reverse
+ * puts2 - prints one character out out of two
+ * @str: input
+ * Return: print
  */
 
-void rev_string(char *s)
+void puts2(char *str)
 {
-	int i, j, len = strlen(s);
-	char tmp;
+	int i = 0;
 
-	j = 0;
-
-	for (i = len - 1; i >= len / 2; i--)
+	for (; str[i] != '\0'; i++)
 	{
-		tmp = s[i];
-		s[i] = s[j];
-		s[j] = tmp;
-		j++;
+		if ((i % 2) == 0)
+			_putchar(str[i]);
+		else
+			continue;
 	}
+	_putchar('\n');
 }
