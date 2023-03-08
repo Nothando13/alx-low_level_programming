@@ -1,4 +1,5 @@
 #include "main.h"
+
 int find_strlen(char *s);
 int check_palindrom(char *s, int len, int index);
 int is_palindrom(char *s);
