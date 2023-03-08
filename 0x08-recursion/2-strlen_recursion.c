@@ -6,7 +6,7 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - find the lengt of a string.
+ * _strlen_recursion - Return the lengt of a string.
  * @s: string to be searched.
  *
  * Return: The length of the string.
