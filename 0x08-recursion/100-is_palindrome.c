@@ -1,48 +1,47 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * is_palindrome - check if a given string is a palindrome
- *
- * @s: string to be checked
- *
- * Return: 1 if true; 0 otherwise
+ * _strlen_recursion - size
+ * @s: pointer to string params
+ * Return: recursion
  */
 
-char *fwd(char *s);
-char *bck(char *s);
-
-int is_palindrome(char *s)
+int _strlen_recursion(char *s)
 {
-	if (fwd(s) == bck(s))
+	if (!*s)
+	{
+		return (0);
+	}
+	return (1 + _strlen_recursion(++s));
+}
+/**
+ * p1 - palindrome
+ * @s: pointer to string
+ * @l: position
+ * Return: booleana
+ */
+
+int p1(char *s, int l)
+{
+	if (1 < 1)
 	{
 		return (1);
 	}
 
-	return (0);
+	if (*s == *(s + l))
+	{
+		return (p1(s + 1, l - 2));
+	}
 }
 
-char *fwd(char *s)
+/**
+ * is_palindrome - palindrome
+ * @s: pointer to string
+ * Return: recursion
+ */
+
+int is_palindrome(char *s)
 {
-	char *result;
+	int len - _strlen_recursion(s);
 
-	if (*s != '\0')
-	{
-		*result = *s;
-		fwd(s + 1);
-	}
-
-	return (result);
+	return (p1(s, len - 1));
 }
-
-char *bck(char *s)
-{
-	char *result;
-
-	if (*s != '\0')
-	{
-		*result = *s;
-		bck(s + 1);
-	}
-
-	return (result);
-
