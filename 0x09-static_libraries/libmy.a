@@ -58,4 +58,4 @@
 
 _putchar.o:
 0000000000000000 T _putchar
-                 U write
+                 U write`
